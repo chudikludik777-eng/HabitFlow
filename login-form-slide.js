@@ -5,7 +5,7 @@ document.getElementById('loginBtn').addEventListener('click', function(e) {
     const password = document.getElementById('password').value.trim();
 
     if(username === 'admin' && password === 'admin123') {
-        window.location.href = '/project/dashboard.html';
+        window.location.href = '/dashboard.html';
     } else {
         alert('Неверный логин или пароль');
     }
