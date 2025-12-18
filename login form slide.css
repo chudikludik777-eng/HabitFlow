@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0b1220;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 80, 200, 0.3);
+}
+
+.form-box.login {
+    flex: 1;
+    background: #020617;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-box.login h2 {
+    color: #e6f0ff;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 10px;
+    background: #0f172a;
+    border: 1px solid #1e3a8a;
+    border-radius: 5px;
+    color: #e6f0ff;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #2563eb;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #c7dbff;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    opacity: 0;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e40af;
+}
+
+.info-content.login {
+    flex: 1;
+    background: #0f1b3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.info-content.login h2 {
+    color: #e6f0ff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.info-content.login p {
+    color: #c7dbff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .form-box.login,
+    .info-content.login {
+        flex: none;
+        width: 90%;
+        margin: 10px auto;
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .form-box.login h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-box input {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    .input-box label {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .info-content.login h2 {
+        font-size: 24px;
+    }
+
+    .info-content.login p {
+        font-size: 14px;
+    }
+}

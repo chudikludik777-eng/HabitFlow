@@ -1,0 +1,12 @@
+document.getElementById('loginBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if(username === 'admin' && password === 'admin123') {
+        window.location.href = '/project/dashboard.html';
+    } else {
+        alert('Неверный логин или пароль');
+    }
+});

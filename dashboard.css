@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b1220;
+    color: #e6f0ff;
+    height: 100vh;
+}
+
+.header {
+    height: 56px;
+    background: #020617;
+    border-bottom: 1px solid #1e3a8a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.tracker {
+    height: calc(100vh - 56px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.tracker-box {
+    background: #020617;
+    border: 1px solid #1e3a8a;
+    padding: 15px;
+}
+
+.tracker-box h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #93c5fd;
+}
+
+.add-habit {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.add-habit input {
+    flex: 1;
+    background: #0f172a;
+    border: 1px solid #1e3a8a;
+    padding: 6px;
+    color: #fff;
+}
+
+.add-habit button {
+    background: #2563eb;
+    border: none;
+    padding: 6px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+li {
+    background: #0f172a;
+    padding: 6px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.1);
+}
+
+/* Адаптация под планшеты и телефоны */
+@media (max-width: 768px) {
+    .tracker {
+        grid-template-columns: 1fr;
+        /* одна колонка вместо трёх */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .tracker-box {
+        padding: 10px;
+    }
+
+    .add-habit input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .add-habit button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .header {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .add-habit button {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+}
